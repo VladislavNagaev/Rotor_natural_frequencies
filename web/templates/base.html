@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Program</title>
+    <script src="../../eel.js"></script>
+    <link rel="icon" type="image/png" href="/static/img/engineer.png">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+
+<body>
+
+    <div class="main-form">
+
+        {% block program_parameters %}{% endblock %}
+
+        {% block table_parameters %}{% endblock %}
+
+        {% block rotor_parameters %}{% endblock %}
+
+        {% block visualization_parameters %}{% endblock %}
+
+        {% block control %}{% endblock %}
+
+        {% block dialog_window %}{% endblock %}
+
+    </div>
+
+    <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"
+    ></script>
+
+    <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+
+    {% block scripts %}{% endblock %}
+
+
+</body>
+
+</html>
+

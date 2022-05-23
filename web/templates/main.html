@@ -1,0 +1,1432 @@
+{% extends 'base.html' %} 
+
+
+{% block program_parameters %}
+<div id="program_parameters">
+
+    <div><h3 class="header">Параметры программы</h3></div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param1_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param1_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param1_id" placeholder="">
+        <input type="checkbox" class="full_description_checker inline_element" id="param1_description_checker">
+        <p class="variable_description_element inline_element" id="param1_description"></p>
+        <label for="param1_description_checker" class="full_description_button inline_element"></label>
+    </div>
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param2_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param2_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param2_id" placeholder="">
+        <input class=" inline_element input_file_window" type="file" id="param2_window" onchange="getFileName();">
+        <label for="param2_window"  class="inline_element input_file_label">. . .</label>
+        <input type="checkbox" class="full_description_checker inline_element" id="param2_description_checker">
+        <p class="variable_description_element inline_element" id="param2_description"></p>
+        <label for="param2_description_checker" class="full_description_button inline_element"></label>
+    </div>
+
+</div>
+{% endblock %}
+
+
+{% block table_parameters %}
+<div id="table_parameters">
+
+    <div><h3 class="header">Параметры загрузки / сохранения таблиц</h3></div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param12_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param12_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param12_id" list="param12_list" placeholder="">
+        <datalist id="param12_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param12_description_checker">
+        <p class="variable_description_element inline_element" id="param12_description"></p>
+        <label for="param12_description_checker" class="full_description_button inline_element"></label>
+    </div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param13_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param13_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param13_id" list="param13_list" placeholder="">
+        <datalist id="param13_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param13_description_checker">
+        <p class="variable_description_element inline_element" id="param13_description"></p>
+        <label for="param13_description_checker" class="full_description_button inline_element"></label>
+    </div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param14_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param14_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param14_id" list="param14_list" placeholder="">
+        <datalist id="param14_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param14_description_checker">
+        <p class="variable_description_element inline_element" id="param14_description"></p>
+        <label for="param14_description_checker" class="full_description_button inline_element"></label>
+    </div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param15_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param15_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param15_id" list="param15_list" placeholder="">
+        <datalist id="param15_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param15_description_checker">
+        <p class="variable_description_element inline_element" id="param15_description"></p>
+        <label for="param15_description_checker" class="full_description_button inline_element"></label>
+    </div>
+
+</div>
+{% endblock %}
+
+
+{% block rotor_parameters %}
+<div id="rotor_parameters">
+
+    <div><h3 class="header">Параметры расчета ротора</h3></div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param3_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param3_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param3_id" list="param3_list" placeholder="">
+        <datalist id="param3_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param3_description_checker">
+        <p class="variable_description_element inline_element" id="param3_description"></p>
+        <label for="param3_description_checker" class="full_description_button inline_element"></label>
+    </div>
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param4_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param4_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param4_id" placeholder="">
+        <input type="checkbox" class="full_description_checker inline_element" id="param4_description_checker">
+        <p class="variable_description_element inline_element" id="param4_description"></p>
+        <label for="param4_description_checker" class="full_description_button inline_element"></label>
+    </div>
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param5_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param5_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param5_id" placeholder="">
+        <input type="checkbox" class="full_description_checker inline_element" id="param5_description_checker">
+        <p class="variable_description_element inline_element" id="param5_description"></p>
+        <label for="param5_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param6_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param6_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param6_id" placeholder="">
+        <input type="checkbox" class="full_description_checker inline_element" id="param6_description_checker">
+        <p class="variable_description_element inline_element" id="param6_description"></p>
+        <label for="param6_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param7_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param7_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param7_id" placeholder="">
+        <input type="checkbox" class="full_description_checker inline_element" id="param7_description_checker">
+        <p class="variable_description_element inline_element" id="param7_description"></p>
+        <label for="param7_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param8_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param8_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param8_id" list="param8_list" placeholder="">
+        <datalist id="param8_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param8_description_checker">
+        <p class="variable_description_element inline_element" id="param8_description"></p>
+        <label for="param8_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+
+
+</div>
+{% endblock %}
+
+
+
+{% block visualization_parameters %}
+<div id="visualization_parameters">
+
+    <div><h3 class="header">Параметры визуализации результатов</h3></div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param9_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param9_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param9_id" list="param9_list" placeholder="">
+        <datalist id="param9_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param9_description_checker">
+        <p class="variable_description_element inline_element" id="param9_description"></p>
+        <label for="param9_description_checker" class="full_description_button inline_element"></label>
+    </div>
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param10_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param10_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param10_id" list="param10_list" placeholder="">
+        <datalist id="param10_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param10_description_checker">
+        <p class="variable_description_element inline_element" id="param10_description"></p>
+        <label for="param10_description_checker" class="full_description_button inline_element"></label>
+    </div>
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param11_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param11_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param11_id" placeholder="">
+        <input type="checkbox" class="full_description_checker inline_element" id="param11_description_checker">
+        <p class="variable_description_element inline_element" id="param11_description"></p>
+        <label for="param11_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param16_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param16_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param16_id" list="param16_list" placeholder="">
+        <datalist id="param16_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param16_description_checker">
+        <p class="variable_description_element inline_element" id="param16_description"></p>
+        <label for="param16_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param17_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param17_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param17_id" list="param17_list" placeholder="">
+        <datalist id="param17_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param17_description_checker">
+        <p class="variable_description_element inline_element" id="param17_description"></p>
+        <label for="param17_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param18_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param18_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param18_id" list="param18_list" placeholder="">
+        <datalist id="param18_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param18_description_checker">
+        <p class="variable_description_element inline_element" id="param18_description"></p>
+        <label for="param18_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param19_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param19_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param19_id" list="param19_list" placeholder="">
+        <datalist id="param19_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param19_description_checker">
+        <p class="variable_description_element inline_element" id="param19_description"></p>
+        <label for="param19_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="param20_status"><img src="/static/img/init.png" class="status-image"></p>
+        <p class="variable_name_elemts inline_element" id="param20_feature"></p>
+        <input class="variable_input_element inline_element" type="text" id="param20_id" list="param20_list" placeholder="">
+        <datalist id="param20_list" required="required"></datalist>
+        <input type="checkbox" class="full_description_checker inline_element" id="param20_description_checker">
+        <p class="variable_description_element inline_element" id="param20_description"></p>
+        <label for="param20_description_checker" class="full_description_button inline_element"></label>
+    </div>  
+
+</div>
+{% endblock %}
+
+
+{% block control %}
+<div id="control">
+
+    <div><h3 class="header">Управление</h3></div>
+
+    <div class="inline_group ">
+        <p class="variable_status_element inline_element" id="data_status"><img src="/static/img/init.png" class="status-image"></p>
+        <button class="inline_element control_button" id="load_rotor_data">Загрузить данные</button>
+        <p class="inline_element space_element"></p>
+        <button class="inline_element visualization_button" id="show_rotor_data">Данные по участкам ротора</button>    
+        <input type="checkbox" class="full_table_checker inline_element" id="table1_checker">               
+        <label for="table1_checker" class="full_table_button inline_element"></label>
+        <div class="table_data_div table1">
+            <table class="table table_data" id="table_rotor_data">
+                <thead class="table_columns" id="table_rotor_data_thead"></thead>
+                <tbody id="table_rotor_data_tbody"></tbody>
+            </table>
+        </div>       
+    </div>
+
+    <div class="inline_group ">
+        <p class="inline_element long_space_element"></p>
+        <button class="inline_element visualization_button" id="show_support_data">Данные по опорам ротора</button> 
+        <input type="checkbox" class="full_table_checker inline_element" id="table2_checker">
+        <label for="table2_checker" class="full_table_button inline_element"></label>
+        <div class="table_data_div table2">
+            <table class="table table_data" id="table_support_data">
+                <thead class="table_columns" id="table_support_data_thead"></thead>
+                <tbody id="table_support_data_tbody"></tbody>
+            </table>
+        </div>     
+    </div>
+
+    <div class="inline_group">
+        <p class="variable_status_element inline_element" id="result_data_status"><img src="/static/img/init.png" class="status-image"></p>
+        <button id="calculate_result_data" class="control_button">Выполнить вычисления</button>
+        <p class="inline_element space_element"></p>
+        <button class="inline_element visualization_button" id="show_visualizations1">График форм колебаний</button>    
+        <input type="checkbox" class="visualizations_div_checker inline_element" id="visualizations1_div_checker">               
+        <label for="visualizations1_div_checker" class="visualizations_div_button inline_element"></label>
+        <div class="visualizations_div" id="visualizations1_div"></div>  
+    </div>
+
+    <div class="inline_group ">
+        <p class="inline_element long_space_element"></p>
+        <button class="inline_element visualization_button" id="show_visualizations2">График зависимости частот колебаний от жесткости</button> 
+        <input type="checkbox" class="visualizations_div_checker inline_element" id="visualizations2_div_checker">
+        <label for="visualizations2_div_checker" class="visualizations_div_button inline_element"></label>
+        <div class="visualizations_div" id="visualizations2_div"></div>  
+    </div>
+
+    <div class="inline_group">
+        <p class="inline_element long_space_element"></p>
+        <button class="inline_element visualization_button" id="save_visualizations1">Сохранить график форм колебаний</button>  
+    </div>
+
+    <div class="inline_group">
+        <p class="inline_element long_space_element"></p>
+        <button class="inline_element visualization_button" id="save_visualizations2">Сохранить график зависимости частот колебаний от жесткости</button>  
+    </div>
+
+    <div class="inline_group">
+        <p class="inline_element long_space_element"></p>
+        <button class="inline_element visualization_button" id="save_result_data">Сохранить таблицу данных форм колебаний</button>           
+    </div>
+
+    <div class="inline_group">
+        <p class="inline_element long_space_element"></p>
+        <button class="inline_element visualization_button" id="save_stiffness_data">Сохранить таблицу частот колебаний</button>  
+    </div>
+    
+</div>
+{% endblock %}
+
+
+{% block dialog_window %}
+<div id="dialog_window">
+
+    <div><h3 class="header">Диалоговое окно</h3></div>
+
+    <div id="dialog_window_div"></div>
+
+</div>
+{% endblock %}
+    
+
+{% block scripts %}
+<script type="text/javascript">
+
+    let init_img = '/static/img/init.png'
+    let success_img = '/static/img/success.png'
+    let error_img = '/static/img/error.png'
+
+    // Заполнение описаний переменных
+    async function fill_varibale_descriptions(){
+        let varibales = await eel.get_varibales()();
+        // Заполнение feature
+        document.getElementById("param1_feature").innerHTML = varibales.param1.feature;
+        document.getElementById("param2_feature").innerHTML = varibales.param2.feature;
+        document.getElementById("param3_feature").innerHTML = varibales.param3.feature;
+        document.getElementById("param4_feature").innerHTML = varibales.param4.feature;
+        document.getElementById("param5_feature").innerHTML = varibales.param5.feature;
+        document.getElementById("param6_feature").innerHTML = varibales.param6.feature;
+        document.getElementById("param7_feature").innerHTML = varibales.param7.feature;
+        document.getElementById("param8_feature").innerHTML = varibales.param8.feature;
+        document.getElementById("param9_feature").innerHTML = varibales.param9.feature;
+        document.getElementById("param10_feature").innerHTML = varibales.param10.feature;
+        document.getElementById("param11_feature").innerHTML = varibales.param11.feature;
+        document.getElementById("param12_feature").innerHTML = varibales.param12.feature;
+        document.getElementById("param13_feature").innerHTML = varibales.param13.feature;
+        document.getElementById("param14_feature").innerHTML = varibales.param14.feature;
+        document.getElementById("param15_feature").innerHTML = varibales.param15.feature;
+        document.getElementById("param16_feature").innerHTML = varibales.param16.feature;
+        document.getElementById("param17_feature").innerHTML = varibales.param17.feature;
+        document.getElementById("param18_feature").innerHTML = varibales.param18.feature;
+        document.getElementById("param19_feature").innerHTML = varibales.param19.feature;
+        document.getElementById("param20_feature").innerHTML = varibales.param20.feature;
+        // Заполнение description
+        document.getElementById("param1_description").innerHTML = varibales.param1.description;
+        document.getElementById("param2_description").innerHTML = varibales.param2.description;
+        document.getElementById("param3_description").innerHTML = varibales.param3.description;
+        document.getElementById("param4_description").innerHTML = varibales.param4.description;
+        document.getElementById("param5_description").innerHTML = varibales.param5.description;
+        document.getElementById("param6_description").innerHTML = varibales.param6.description;
+        document.getElementById("param7_description").innerHTML = varibales.param7.description;
+        document.getElementById("param8_description").innerHTML = varibales.param8.description;
+        document.getElementById("param9_description").innerHTML = varibales.param9.description;
+        document.getElementById("param10_description").innerHTML = varibales.param10.description;
+        document.getElementById("param11_description").innerHTML = varibales.param11.description;
+        document.getElementById("param12_description").innerHTML = varibales.param12.description;
+        document.getElementById("param13_description").innerHTML = varibales.param13.description;
+        document.getElementById("param14_description").innerHTML = varibales.param14.description;
+        document.getElementById("param15_description").innerHTML = varibales.param15.description;
+        document.getElementById("param16_description").innerHTML = varibales.param16.description;
+        document.getElementById("param17_description").innerHTML = varibales.param17.description;
+        document.getElementById("param18_description").innerHTML = varibales.param18.description;
+        document.getElementById("param19_description").innerHTML = varibales.param19.description;
+        document.getElementById("param20_description").innerHTML = varibales.param20.description;
+        // Заполнение placeholder
+        document.getElementById("param1_id").placeholder = varibales.param1.placeholder;
+        document.getElementById("param2_id").placeholder = varibales.param2.placeholder;
+        document.getElementById("param3_id").placeholder = varibales.param3.placeholder;
+        document.getElementById("param4_id").placeholder = varibales.param4.placeholder;
+        document.getElementById("param5_id").placeholder = varibales.param5.placeholder;
+        document.getElementById("param6_id").placeholder = varibales.param6.placeholder;
+        document.getElementById("param7_id").placeholder = varibales.param7.placeholder;
+        document.getElementById("param8_id").placeholder = varibales.param8.placeholder;
+        document.getElementById("param9_id").placeholder = varibales.param9.placeholder;
+        document.getElementById("param10_id").placeholder = varibales.param10.placeholder;
+        document.getElementById("param11_id").placeholder = varibales.param11.placeholder;
+        document.getElementById("param12_id").placeholder = varibales.param12.placeholder;
+        document.getElementById("param13_id").placeholder = varibales.param13.placeholder;
+        document.getElementById("param14_id").placeholder = varibales.param14.placeholder;
+        document.getElementById("param15_id").placeholder = varibales.param15.placeholder;
+        document.getElementById("param16_id").placeholder = varibales.param16.placeholder;
+        document.getElementById("param17_id").placeholder = varibales.param17.placeholder;
+        document.getElementById("param18_id").placeholder = varibales.param18.placeholder;
+        document.getElementById("param19_id").placeholder = varibales.param19.placeholder;
+        document.getElementById("param20_id").placeholder = varibales.param20.placeholder;
+        // Заполнение values
+        document.getElementById("param1_id").value = varibales.param1.value;
+        document.getElementById("param2_id").value = varibales.param2.value;
+        document.getElementById("param3_id").value = varibales.param3.value;
+        document.getElementById("param4_id").value = varibales.param4.value;
+        document.getElementById("param5_id").value = varibales.param5.value;
+        document.getElementById("param6_id").value = varibales.param6.value;
+        document.getElementById("param7_id").value = varibales.param7.value;
+        document.getElementById("param8_id").value = varibales.param8.value;
+        document.getElementById("param9_id").value = varibales.param9.value;
+        document.getElementById("param10_id").value = varibales.param10.value;
+        document.getElementById("param11_id").value = varibales.param11.value;
+        document.getElementById("param12_id").value = varibales.param12.value;
+        document.getElementById("param13_id").value = varibales.param13.value;
+        document.getElementById("param14_id").value = varibales.param14.value;
+        document.getElementById("param15_id").value = varibales.param15.value;
+        document.getElementById("param16_id").value = varibales.param16.value;
+        document.getElementById("param17_id").value = varibales.param17.value;
+        document.getElementById("param18_id").value = varibales.param18.value;
+        document.getElementById("param19_id").value = varibales.param19.value;
+        document.getElementById("param20_id").value = varibales.param20.value;
+        // Заполнение datalist
+        document.getElementById("param3_list").innerHTML = __prepare_datalist(varibales.param3.datalist);
+        document.getElementById("param8_list").innerHTML = __prepare_datalist(varibales.param8.datalist);
+        document.getElementById("param9_list").innerHTML = __prepare_datalist(varibales.param9.datalist);
+        document.getElementById("param10_list").innerHTML = __prepare_datalist(varibales.param10.datalist);
+        document.getElementById("param12_list").innerHTML = __prepare_datalist(varibales.param12.datalist);
+        document.getElementById("param13_list").innerHTML = __prepare_datalist(varibales.param13.datalist);
+        document.getElementById("param14_list").innerHTML = __prepare_datalist(varibales.param14.datalist);
+        document.getElementById("param15_list").innerHTML = __prepare_datalist(varibales.param15.datalist);
+        document.getElementById("param16_list").innerHTML = __prepare_datalist(varibales.param16.datalist);
+        document.getElementById("param17_list").innerHTML = __prepare_datalist(varibales.param17.datalist);
+        document.getElementById("param18_list").innerHTML = __prepare_datalist(varibales.param18.datalist);
+        document.getElementById("param19_list").innerHTML = __prepare_datalist(varibales.param19.datalist);
+        document.getElementById("param20_list").innerHTML = __prepare_datalist(varibales.param20.datalist);
+    }
+
+
+    // Заполнить таблицу данных ротора
+    function __prepare_datalist(datalist){
+        var options = '';
+        if (datalist.length >0){
+            // Проход по списку 
+            for (var j = 0; j < datalist.length; j++){
+                options += `<option value=${datalist[j]['value']}>${datalist[j]['description']}</option>`;
+            };
+        }
+        return options;
+    }
+
+    // Заполнение поля ввода директории из выпадающего окна
+    function getFileName () {
+        var fullPath = document.getElementById('param2_window').value;
+        fileName = fullPath.replace(/\\/g, "/").split ('/').pop();
+        document.getElementById('param2_id').value = fullPath;
+        start_param2_checker();
+    };
+
+
+    // Получение параметраов
+    async function __get_param1(){
+        let elementId = 'param1_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({data_folder:param})();
+    }
+    async function __get_param2(){
+
+        let param1 = await __get_param1();
+        let data_folder = param1['value'];
+
+        let elementId = 'param2_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        
+        let rotor_data_path = await eel.data_path_return({data_folder:data_folder, data_path:param})();
+
+        return await eel.param_checker({rotor_data_path:rotor_data_path})();
+    }
+    async function __get_param3(){
+        let elementId = 'param3_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({natural_frequencies_number:param})();
+    }
+    async function __get_param4(){
+        let elementId = 'param4_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({F1:param})();
+    }
+    async function __get_param5(){
+        let elementId = 'param5_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({FT1:param})();
+    }
+    async function __get_param6(){
+        let elementId = 'param6_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({fk:param})();
+    }
+    async function __get_param7(){
+        let elementId = 'param7_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({EPSF:param})();
+    }
+    async function __get_param8(){
+        let elementId = 'param8_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({normalize:param})();
+    }
+    async function __get_param9(){
+        let elementId = 'param9_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({plot_format:param})();
+    }
+    async function __get_param10(){
+        let elementId = 'param10_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({stiffness_on_plot:param})();
+    }
+    async function __get_param11(){
+        let elementId = 'param11_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({plot_dpi:param})();
+    }
+    async function __get_param12(){
+        let elementId = 'param12_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({data_format:param})();
+    }
+    async function __get_param13(){
+        let elementId = 'param13_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({data_encoding:param})();
+    }
+    async function __get_param14(){
+        let elementId = 'param14_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({data_sep:param})();
+    }
+    async function __get_param15(){
+        let elementId = 'param15_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({data_decimal:param})();
+    }
+    async function __get_param16(){
+        let elementId = 'param16_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({frequency_units:param})();
+    }
+    async function __get_param17(){
+        let elementId = 'param17_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({horizontal_boundaries:param})();
+    }
+    async function __get_param18(){
+        let elementId = 'param18_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({vertical_boundaries:param})();
+    }
+    async function __get_param19(){
+        let elementId = 'param19_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({restricted_areas:param})();
+    }
+    async function __get_param20(){
+        let elementId = 'param20_id'
+        let param_value = document.getElementById(elementId).value;
+        let param_placeholder = document.getElementById(elementId).placeholder;
+        if (param_value == '') {param = param_placeholder} else {param = param_value}
+        return await eel.param_checker({restricted_areas_width:param})();
+    }
+
+    // Проверка корректности ввода параметров
+    async function start_param1_checker(){
+        let elementId = 'param1_status'
+        let param = await __get_param1();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param2_checker(){
+        let elementId = 'param2_status'
+        let param = await __get_param2();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param3_checker(){
+        let elementId = 'param3_status'
+        let param = await __get_param3();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param4_checker(){
+        let elementId = 'param4_status'
+        let param = await __get_param4();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param5_checker(){
+        let elementId = 'param5_status'
+        let param = await __get_param5();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param6_checker(){
+        let elementId = 'param6_status'
+        let param = await __get_param6();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param7_checker(){
+        let elementId = 'param7_status'
+        let param = await __get_param7();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param8_checker(){
+        let elementId = 'param8_status'
+        let param = await __get_param8();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param9_checker(){  
+        let elementId = 'param9_status'  
+        let param = await __get_param9();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param10_checker(){ 
+        let elementId = 'param10_status'   
+        let param = await __get_param10();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param11_checker(){    
+        let elementId = 'param11_status'
+        let param = await __get_param11();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param12_checker(){ 
+        let elementId = 'param12_status'   
+        let param = await __get_param12();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param13_checker(){    
+        let elementId = 'param13_status'
+        let param = await __get_param13();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param14_checker(){   
+        let elementId = 'param14_status' 
+        let param = await __get_param14();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param15_checker(){    
+        let elementId = 'param15_status'
+        let param = await __get_param15();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param16_checker(){    
+        let elementId = 'param16_status'
+        let param = await __get_param16();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param17_checker(){    
+        let elementId = 'param17_status'
+        let param = await __get_param17();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param18_checker(){    
+        let elementId = 'param18_status'
+        let param = await __get_param18();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param19_checker(){    
+        let elementId = 'param19_status'
+        let param = await __get_param19();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+    async function start_param20_checker(){    
+        let elementId = 'param20_status'
+        let param = await __get_param20();
+        if (param['status']==true) {status_img=success_img} else {status_img=error_img}
+        document.getElementById(elementId).innerHTML = '<img src='+status_img+' class="status-image">';
+    }
+
+
+    // Прочитать, проверить и вернуть все параметры
+    async function __params_return(){
+
+        variables = {
+            // Рабочая директория
+            data_folder: await __get_param1(),
+            // Файл данных ротора
+            rotor_data_path: await __get_param2(),
+            // Число собственных частот, подлежащих отысканию
+            natural_frequencies_number: await __get_param3(),
+            // Начальная частота диапзаона поиска собственных частот
+            F1: await __get_param4(),
+            // Шаг по частоте
+            FT1: await __get_param5(),
+            // Верхняя граница диапазона поиска
+            fk: await __get_param6(),
+            // Точность поиска частоты
+            EPSF: await __get_param7(),
+            // Нормирование форм
+            normalize: await __get_param8(),
+            // Формат сохранения графиков
+            plot_format: await __get_param9(),
+            // Таблица жесткостей по опорам на графике
+            stiffness_on_plot: await __get_param10(),
+            // Разрешение графиков в точках на дюйм
+            plot_dpi: await __get_param11(),
+            // Формат сохранения таблиц
+            data_format: await __get_param12(),
+            // Кодировка загружаемого / сохраняемого файла
+            data_encoding: await __get_param13(),
+            // Разделитель ячеек загружаемого / сохраняемого файла
+            data_sep: await __get_param14(),
+            // Десятичный разделитель чисел с плавающей точкой загружаемого / сохраняемого файла
+            data_decimal: await __get_param15(),
+            // Формат вывода частоты колебаний
+            frequency_units: await __get_param16(),
+            // Границы «горизонтальной» жесткости
+            horizontal_boundaries: await __get_param17(),
+            // Границы «вертикальной» жесткости
+            vertical_boundaries: await __get_param18(),
+            // Значение частот «запретных зон» в Гц
+            restricted_areas: await __get_param19(),
+            // Значение ширины окна «запретных зон» в процентах
+            restricted_areas_width: await __get_param20(),
+        }
+
+        return await variables;
+    }
+
+    // Проверка готовности исходных данных ротора
+    async function rotor_data_checker(neutral_status=false){
+        if (neutral_status){status_img = init_img}
+        else{
+            let data = await __return_rotor_data()
+            if (data != null) {status_img=success_img} else {status_img=error_img}
+        }
+        document.getElementById("data_status").innerHTML = '<img src='+status_img+' class="status-image">';
+        return true;
+    }
+    // Проверка готовности результатов вычислений
+    async function result_data_checker(neutral_status=false){
+        if (neutral_status){status_img = init_img}
+        else {
+            let data = await __return_result_data()
+            if (data != null) {status_img=success_img} else {status_img=error_img}
+        }
+        document.getElementById("result_data_status").innerHTML = '<img src='+status_img+' class="status-image">';
+        return true;
+    }
+
+    // Полная проверка всех параметров
+    async function start_full_checker(){
+
+        await start_param1_checker();
+        await start_param2_checker();
+        await start_param3_checker();
+        await start_param4_checker();
+        await start_param5_checker();
+        await start_param6_checker();
+        await start_param7_checker();
+        await start_param8_checker();
+        await start_param9_checker();
+        await start_param10_checker();
+        await start_param11_checker();
+        await start_param12_checker();
+        await start_param13_checker();
+        await start_param14_checker();
+        await start_param15_checker();
+        await start_param16_checker();
+        await start_param17_checker();
+        await start_param18_checker();
+        await start_param19_checker();
+        await start_param20_checker();
+
+        await rotor_data_checker();
+        await result_data_checker();
+    }
+
+    // Очистка таблицы визуализации исходных данных ротора
+    async function __clear_rotor_data_shown(){
+
+        // Объект таблица
+        var table = document.getElementById('table_rotor_data')
+        var table_thead = document.getElementById('table_rotor_data_thead')
+        var table_tbody = document.getElementById('table_rotor_data_tbody')
+
+        // Очистка исходной таблицы
+        $(table_thead.childNodes).remove(); 
+        $(table_tbody.childNodes).remove(); 
+
+        return true;
+    }
+    // Очистка таблицы визуализации данных по опорам
+    async function __clear_support_data_shown(){
+
+        // Объект таблица
+        var table = document.getElementById('table_support_data')
+        var table_thead = document.getElementById('table_support_data_thead')
+        var table_tbody = document.getElementById('table_support_data_tbody')
+
+        // Очистка исходной таблицы
+        $(table_thead.childNodes).remove(); 
+        $(table_tbody.childNodes).remove(); 
+        
+        return true;
+    }
+    // Очистка графика форм колебаний
+    async function __clear_visualizations1_shown(){
+
+        // Объект таблица
+        var div = document.getElementById('visualizations1_div')
+
+        // Очистка контейнера
+        $(div.childNodes).remove(); 
+
+        return true;
+    }
+    // Очистка графика зависимости частот колебаний от жесткости
+    async function __clear_visualizations2_shown(){
+
+        // Объект таблица
+        var div = document.getElementById('visualizations2_div')
+
+        // Очистка контейнера
+        $(div.childNodes).remove(); 
+
+        return true;
+    }
+
+    async function __load_rotor_data(kwargs){
+        let status = await eel.load_rotor_data(kwargs)();
+        let status0 = await rotor_data_checker();
+        return await status;
+    }
+    async function __calculate_result_data(kwargs){
+        let status = await eel.calculate_result_data(kwargs)();
+        let status0 = await result_data_checker();
+        return await status;
+    }
+    async function __prepare_visualizations1(kwargs){
+        let status = await eel.prepare_visualizations1(kwargs)();
+        return await status;
+    }
+    async function __prepare_visualizations2(kwargs){
+        let status = await eel.prepare_visualizations2(kwargs)();
+        return await status;
+    }
+
+
+    // Вернуть исходные данные ротора
+    async function __return_rotor_data(){return await eel.return_rotor_data()();}
+    // Вернуть данные по опорам
+    async function __return_support_data(){return await eel.return_support_data()();}
+    // Вернуть результаты вычислений
+    async function __return_result_data(){return await eel.return_result_data()();}
+    // Вернуть таблицу жесткостей
+    async function __return_stiffness_data(){return await eel.return_stiffness_data()();}
+    // Вернуть визуализацию результатов вычислений
+    async function __return_visualizations1(){return await eel.return_visualizations1()();}
+    async function __return_visualizations2(){return await eel.return_visualizations2()();}
+    // Сохранить результаты вычислений
+    async function __save_result_data(kwargs){return await eel.save_result_data(kwargs)();}
+    // Сохранить таблицу жесткостей
+    async function __save_stiffness_data(kwargs){return await eel.save_stiffness_data(kwargs)();}
+    // Сохранить визуализацию результатов вычислений
+    async function __save_visualizations1(kwargs){return await eel.save_visualizations1(kwargs)();}
+    async function __save_visualizations2(kwargs){return await eel.save_visualizations2(kwargs)();}
+
+
+    // Прочитать исходные данные ротора
+    async function load_rotor_data(){
+
+        let status0 = await rotor_data_checker(true);
+
+        let varibales = await __params_return();
+
+        if (
+            varibales['data_folder']['status'] && 
+            varibales['rotor_data_path']['status'] && 
+            varibales['data_format']['status'] && 
+            varibales['data_encoding']['status'] && 
+            varibales['data_sep']['status'] && 
+            varibales['data_decimal']['status']
+        ){
+
+            write_to_dialog_window('Загрузка исходных данных ротора начата!');
+
+            let status1 = __clear_rotor_data_shown()
+            let status2 = __clear_support_data_shown()
+            let status3 = __clear_visualizations1_shown()
+            let status4 = __clear_visualizations2_shown()
+
+            let status = await __load_rotor_data({
+                rotor_data_path:varibales['rotor_data_path']['value'],
+                data_format:varibales['data_format']['value'],
+                data_encoding:varibales['data_encoding']['value'],
+                data_sep:varibales['data_sep']['value'],
+                data_decimal:varibales['data_decimal']['value']
+            })
+
+            let status6 = await result_data_checker()
+
+            if (status) {
+                // Вывести исходные данные ротора
+                let rotor_data = await __return_rotor_data()
+                let status4 = await __fill_rotor_data_table(rotor_data);
+                // Вывести данные по опорам ротора
+                let support_data = await __return_support_data()
+                let status5 = await __fill_support_data_table(support_data);
+                write_to_dialog_window('Загрузка исходных данных ротора успешно выполнена!');
+                return true;
+            }
+            else {
+                write_to_dialog_window('Загрузка исходных данных ротора НЕ выполнена!')
+                return false;
+            }
+        }
+        else {
+            write_to_dialog_window('Загрузка исходных данных ротора НЕ начата: указанные параметры некорректны!')
+            let status0 = await rotor_data_checker();
+            return false;
+        }
+    }
+    // Выполнить вычисления
+    async function calculate_result_data(){
+
+        let varibales = await __params_return()
+
+        if (
+            varibales['natural_frequencies_number']['status'] && 
+            varibales['F1']['status'] && 
+            varibales['FT1']['status'] && 
+            varibales['fk']['status'] && 
+            varibales['EPSF']['status'] && 
+            varibales['normalize']['status'] &&
+            varibales['stiffness_on_plot']['status'] && 
+            varibales['plot_dpi']['status'] &&
+            varibales['plot_format']['status'] &&
+            varibales['frequency_units']['status'] &&
+            varibales['horizontal_boundaries']['status'] &&
+            varibales['vertical_boundaries']['status'] &&
+            varibales['restricted_areas']['status'] &&
+            varibales['restricted_areas_width']['status']
+        ){
+            let rotor_data = await __return_rotor_data()
+
+            if (rotor_data == null) {
+                write_to_dialog_window('Исходные данные ротора не загружены!');
+                let status = await load_rotor_data()
+                if (!status) {return false}
+            }
+
+            write_to_dialog_window('Вычисление результатов запущено!');
+
+            let status0 = await result_data_checker(true);
+            let status3 = __clear_visualizations1_shown()
+            let status8 = __clear_visualizations2_shown()
+            
+            let status = await __calculate_result_data({
+                natural_frequencies_number:varibales['natural_frequencies_number']['value'],
+                F1:varibales['F1']['value'],
+                FT1:varibales['FT1']['value'],
+                fk:varibales['fk']['value'],
+                EPSF:varibales['EPSF']['value'],
+                normalize:varibales['normalize']['value'],
+            })
+
+            // Выполнить визуализацию результатов вычислений 1
+            let status4 = await __prepare_visualizations1({
+                stiffness_on_plot:varibales['stiffness_on_plot']['value'],
+                plot_dpi:varibales['plot_dpi']['value'],
+                plot_format:varibales['plot_format']['value'],
+                frequency_units:varibales['frequency_units']['value'],
+            })
+
+            // Вывести визуализацию результатов вычислений 1
+            let visualizations1 = await __return_visualizations1();
+            let status5 = await fill_visualizations1_container(visualizations1);
+            
+            // Выполнить визуализацию результатов вычислений 2
+            let status6 = await __prepare_visualizations2({
+                plot_dpi:varibales['plot_dpi']['value'],
+                plot_format:varibales['plot_format']['value'],
+                frequency_units:varibales['frequency_units']['value'],
+                horizontal_boundaries:varibales['horizontal_boundaries']['value'],
+                vertical_boundaries:varibales['vertical_boundaries']['value'],
+                restricted_areas:varibales['restricted_areas']['value'],
+                restricted_areas_width:varibales['restricted_areas_width']['value'],
+            })
+
+            // Вывести визуализацию результатов вычислений 2
+            let visualizations2 = await __return_visualizations2();
+            let status7 = await fill_visualizations2_container(visualizations2);
+
+            if (status && status4 && status5 && status7) {
+                write_to_dialog_window('Вычисление результатов успешно завершено!')
+                return true
+            }
+            else {
+                write_to_dialog_window('Вычисление результатов не завершено: произошла ошибка!');
+                return false
+            }
+        }
+        else {
+            write_to_dialog_window('Вычисление результатов не начато: указанные параметры некорректны!')
+            let status0 = await result_data_checker();
+            return false
+        }
+
+    }
+
+    // Заполнить таблицу данных ротора
+    function __fill_rotor_data_table(data){
+
+        let data_values = data['data_values']
+        let data_index = data['data_index']
+        let data_columns = data['data_columns']
+
+        // Объект таблица
+        var table = document.getElementById('table_rotor_data')
+        var table_thead = document.getElementById('table_rotor_data_thead')
+        var table_tbody = document.getElementById('table_rotor_data_tbody')
+
+        // Очистка исходной таблицы
+        $(table_thead.childNodes).remove(); 
+        $(table_tbody.childNodes).remove(); 
+
+        // Проход по списку столбцов
+        var th = '';
+        for (var j = 0; j < data_columns.length; j++){
+            th += `<th>${data_columns[j]}</th>`;
+        };
+        table_thead.innerHTML += `<tr>${th}</tr>`
+
+        // Проход по списку ключей
+        for (var i = 0; i < data_index.length; i++){
+            var row_i = data_values[data_index[i]];
+            var td ='';
+            for (var j = 0; j < data_columns.length; j++){
+                td += `<td>${row_i[data_columns[j]]}</td>`
+            };
+            var row = `<tr>${td}</tr>`
+            table_tbody.innerHTML += row
+        };
+
+        return true;
+    }
+    // Заполнить таблицу данных по опорам
+    function __fill_support_data_table(data){
+
+        let data_values = data['data_values']
+        let data_index = data['data_index']
+        let data_columns = data['data_columns']
+
+        // Объект таблица
+        var table = document.getElementById('table_support_data')
+        var table_thead = document.getElementById('table_support_data_thead')
+        var table_tbody = document.getElementById('table_support_data_tbody')
+
+        // Очистка исходной таблицы
+        $(table_thead.childNodes).remove(); 
+        $(table_tbody.childNodes).remove(); 
+
+        // Проход по списку столбцов
+        var th = '';
+        for (var j = 0; j < data_columns.length; j++){
+            th += `<th>${data_columns[j]}</th>`;
+        };
+        table_thead.innerHTML += `<tr>${th}</tr>`
+
+        // Проход по списку ключей
+        for (var i = 0; i < data_index.length; i++){
+            var row_i = data_values[data_index[i]];
+            var td ='';
+            for (var j = 0; j < data_columns.length; j++){
+                td += `<td>${row_i[data_columns[j]]}</td>`
+            };
+            var row = `<tr>${td}</tr>`
+            table_tbody.innerHTML += row
+        };
+
+        return true;
+    }
+    
+    // Сохранить результаты
+    async function save_result_data(){
+
+        let varibales = await __params_return();
+
+        if (
+            varibales['data_folder']['status'] &&
+            varibales['data_format']['status'] && 
+            varibales['data_encoding']['status'] && 
+            varibales['data_sep']['status'] && 
+            varibales['data_decimal']['status']
+        ){
+
+            let data = await __return_result_data()
+
+            if (data == null) {
+                write_to_dialog_window('Отсутствуют результаты вычислений!');
+                let status = await calculate_result_data();
+                if (!status) {return false}
+            }
+
+            write_to_dialog_window('Сохранение результатов вычислений начато!');
+
+            let status = await __save_result_data({
+                data_folder:varibales['data_folder']['value'],
+                data_format:varibales['data_format']['value'],
+                data_encoding:varibales['data_encoding']['value'],
+                data_sep:varibales['data_sep']['value'],
+                data_decimal:varibales['data_decimal']['value']
+            });
+
+            if (status) {
+                write_to_dialog_window('Сохранение результатов вычислений успешно завершено!');
+                return true;
+            }
+            else {
+                write_to_dialog_window('Сохранение результатов вычислений НЕ завершено!');
+                return false;
+            }
+        }
+        else {
+            write_to_dialog_window('Сохранение результатов вычислений НЕ начато: указанные параметры некорректны!');
+            return false;
+        }
+    }
+    // Сохранить матрицу жесткостей
+    async function save_stiffness_data(){
+
+        let varibales = await __params_return();
+
+        if (
+            varibales['data_folder']['status'] && 
+            varibales['data_format']['status'] && 
+            varibales['data_encoding']['status'] && 
+            varibales['data_sep']['status'] && 
+            varibales['data_decimal']['status']
+        ){
+
+            let data = await __return_stiffness_data()
+
+            if (data == null) {
+                write_to_dialog_window('Отсутствуют результаты вычислений!');
+                let status = await calculate_result_data();
+                if (!status) {return false}
+            }
+
+            write_to_dialog_window('Сохранение таблицы жесткостей начато!');
+
+            let status = await __save_stiffness_data({
+                data_folder:varibales['data_folder']['value'],
+                data_format:varibales['data_format']['value'],
+                data_encoding:varibales['data_encoding']['value'],
+                data_sep:varibales['data_sep']['value'],
+                data_decimal:varibales['data_decimal']['value']
+            });
+
+            if (status) {
+                write_to_dialog_window('Сохранение таблицы жесткостей успешно завершено!');
+                return true;
+            }
+            else {
+                write_to_dialog_window('Сохранение таблицы жесткостей НЕ завершено!');
+                return false;
+            }
+        }
+        else {
+            write_to_dialog_window('Сохранение таблицы жесткостей НЕ начато: указанные параметры некорректны!');
+            return false;
+        }
+    }
+
+    function __fill_visualizations_container(visualizations, elementId){
+
+        // Объект таблица
+        var div = document.getElementById(elementId)
+
+        // Очистка контейнера
+        $(div.childNodes).remove(); 
+
+        // Проход по списку ключей
+        for (var i = 0; i < visualizations.length; i++){
+
+            let visualization = visualizations[i]
+
+            let figure = visualization['figure']
+            let name = visualization['name']
+            let format = visualization['format']
+            let dpi = visualization['dpi']
+
+            div.innerHTML += `<p><img src="data:image/${format};base64,${figure}" alt="График температуры"></p>`
+
+        };
+
+        return true
+    }
+
+    // Вывести графики в контейнер 1
+    function fill_visualizations1_container(visualizations){
+        let elementId = 'visualizations1_div'
+        let status = __fill_visualizations_container(visualizations, elementId)
+        return status;
+    }
+    // Вывести графики в контейнер 2
+    function fill_visualizations2_container(visualizations){
+        let elementId = 'visualizations2_div'
+        let status = __fill_visualizations_container(visualizations, elementId)
+        return status;
+    }
+
+
+    // Сохранить визуализацию результатов вычислений 1
+    async function save_visualizations1(){
+
+        let varibales = await __params_return();
+
+        if (varibales['data_folder']['status']){
+
+            let visualizations1 = await __return_visualizations1();
+
+            if (visualizations1 == null) {
+                write_to_dialog_window('Отсутствуют результаты вычислений!');
+                let status = await calculate_result_data();
+                if (!status) {return false}
+            }
+
+            write_to_dialog_window('Сохранение визуализаци результаты вычислений начато!');
+
+            let status = await __save_visualizations1({
+                data_folder:varibales['data_folder']['value']
+            });
+
+            if (status) {
+                write_to_dialog_window('Сохранение визуализаци результаты вычислений успешно завершено!');
+                return true;
+            }
+            else {
+                write_to_dialog_window('Сохранение визуализаци результаты вычислений НЕ завершено!');
+                return false;
+            }
+        }
+        else {
+            write_to_dialog_window('Сохранение визуализаци результаты вычислений НЕ начато: указанные параметры некорректны!');
+            return false;
+        }
+    }
+    // Сохранить визуализацию результатов вычислений 2
+    async function save_visualizations2(){
+
+        let varibales = await __params_return();
+
+        if (varibales['data_folder']['status']){
+
+            let visualizations2 = await __return_visualizations2();
+
+            if (visualizations2 == null) {
+                write_to_dialog_window('Отсутствуют результаты вычислений!');
+                let status = await calculate_result_data();
+                if (!status) {return false}
+            }
+
+            write_to_dialog_window('Сохранение визуализаци результаты вычислений начато!');
+
+            let status = await __save_visualizations2({
+                data_folder:varibales['data_folder']['value']
+            });
+
+            if (status) {
+                write_to_dialog_window('Сохранение визуализаци результаты вычислений успешно завершено!');
+                return true;
+            }
+            else {
+                write_to_dialog_window('Сохранение визуализаци результаты вычислений НЕ завершено!');
+                return false;
+            }
+        }
+        else {
+            write_to_dialog_window('Сохранение визуализаци результаты вычислений НЕ начато: указанные параметры некорректны!');
+            return false;
+        }
+    }
+
+
+    // Вывод сообщения в диалоговое окно
+    function write_to_dialog_window(message){
+
+        // Объект диалоговое окно
+        var div = document.getElementById('dialog_window_div');
+        // текущее время
+        let datetime = return_datetime();
+        // Вывод в диалоговое окно сообщения
+        div.innerHTML += `<p>[${datetime}]   ${message}</p>`;
+    }
+
+    // Вернуть текущие дату и время
+    function return_datetime(){
+        var m = new Date();
+        var datetime = 
+            ("0" + m.getDate()).slice(-2) + "." +
+            ("0" + (m.getMonth()+1)).slice(-2) + "." +
+            m.getUTCFullYear() + " " +
+            ("0" + m.getHours()).slice(-2) + ":" +
+            ("0" + m.getMinutes()).slice(-2) + ":" +
+            ("0" + m.getSeconds()).slice(-2) + " " +
+            ("0" + m.getMilliseconds()).slice(-3);
+        return datetime;
+    }
+
+
+    // Автопрокрутка контейнера
+    function auto_scroll_div(div){
+
+        var timer;
+        var isPaused = false;
+
+        $(window).on('wheel', function(){
+            isPaused = true;
+            clearTimeout(timer);
+            timer = window.setTimeout(function(){
+                isPaused = false;
+            }, 1000);   
+        });
+        
+        window.setInterval(function(){          
+            if(!isPaused){
+                $(`#${div}`).scrollTop($(`#${div}`)[0].scrollHeight);
+            }
+        }, 500);
+    }
+
+
+    $(document).ready(function (){fill_varibale_descriptions();})
+
+    $.when( fill_varibale_descriptions() ).done(function() {
+
+        // Первичная однократная проверка всех параметров (введены по умолчанию)
+        start_full_checker();
+
+        // Постоянная проверка при введении параметров
+        $('#param1_id').keyup(function () {start_param1_checker();});
+        $('#param2_id').keyup(function () {start_param2_checker();});
+        $('#param3_id').keyup(function () {start_param3_checker();});
+        $('#param4_id').keyup(function () {start_param4_checker();});
+        $('#param5_id').keyup(function () {start_param5_checker();});
+        $('#param6_id').keyup(function () {start_param6_checker();});
+        $('#param7_id').keyup(function () {start_param7_checker();});
+        $('#param8_id').keyup(function () {start_param8_checker();});
+        $('#param9_id').keyup(function () {start_param9_checker();});
+        $('#param10_id').keyup(function () {start_param10_checker();});
+        $('#param11_id').keyup(function () {start_param11_checker();});
+        $('#param12_id').keyup(function () {start_param12_checker();});
+        $('#param13_id').keyup(function () {start_param13_checker();});
+        $('#param14_id').keyup(function () {start_param14_checker();});
+        $('#param15_id').keyup(function () {start_param15_checker();});
+        $('#param16_id').keyup(function () {start_param16_checker();});
+        $('#param17_id').keyup(function () {start_param17_checker();});
+        $('#param18_id').keyup(function () {start_param18_checker();});
+        $('#param19_id').keyup(function () {start_param19_checker();});
+        $('#param20_id').keyup(function () {start_param20_checker();});
+
+        // Действие по таймеру
+        auto_scroll_div('dialog_window_div');
+
+        // Выполнение по нажатию
+        $('#load_rotor_data').click(function () {
+            let status = load_rotor_data();
+            if (!status) {write_to_dialog_window('Операция чтения исходные данные ротора прервана!');}
+        });
+        $('#calculate_result_data').click(function () {
+            let status = calculate_result_data();
+            if (!status) {write_to_dialog_window('Операция вычисления результатов прервана!');}
+        });
+        $('#save_visualizations1').click(function () {
+            let status = save_visualizations1();
+            if (!status) {write_to_dialog_window('Операция сохранения визуализации результатов вычислений прервана!');}
+        });
+        $('#save_visualizations2').click(function () {
+            let status = save_visualizations2();
+            if (!status) {write_to_dialog_window('Операция сохранения визуализации результатов вычислений прервана!');}
+        });
+        $('#save_result_data').click(function () {
+            let status = save_result_data();
+            if (!status) {write_to_dialog_window('Операция сохранения результатов вычислений прервана!');}
+        });
+        $('#save_stiffness_data').click(function () {
+            let status = save_stiffness_data();
+            if (!status) {write_to_dialog_window('Операция сохранения таблицы жесткостей прервана!');}
+        });
+
+    })
+    
+</script>
+{% endblock %}
+
+

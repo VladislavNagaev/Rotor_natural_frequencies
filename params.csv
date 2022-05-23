@@ -1,0 +1,24 @@
+﻿feature;value
+data_folder;
+encoding;cp1251
+decimal;,
+sep;";"
+rotor_data_path;rotor_data.xlsx
+natural_frequencies_number;5
+F1;20
+FT1;0.5
+fk;10000
+EPSF;0.0000001
+normalize;True
+plot_format;png
+stiffness_on_plot;True
+plot_dpi;100
+data_format;xlsx
+data_encoding;cp1251
+data_sep;";"
+data_decimal;,
+frequency_units;hertz
+horizontal_boundaries;0.15, 0.30
+vertical_boundaries;1.0, 1.5
+restricted_areas;25.0, 50.0, 100.0
+restricted_areas_width;10.0, 10.0, 10.0
